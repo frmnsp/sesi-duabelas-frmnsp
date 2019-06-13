@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //@TODO(12) TAMBAHKAN INITIALISASI WIDGET
+        //@TODO(11) TAMBAHKAN INITIALISASI WIDGET
 
-        //@TODO(13) BUAT PERMODELAN CLASS UNTUK SERIALIZE DATA DARI REST API (GUNAKAN www.jsonschema2pojo.org)
+        //@TODO(12) BUAT PERMODELAN CLASS UNTUK SERIALIZE DATA DARI REST API (GUNAKAN www.jsonschema2pojo.org)
 
-        //@TODO(14) BUAT METHOD untuk memanggil Activity BeritaListActivity
+        //@TODO(13) BUAT METHOD untuk memanggil Activity BeritaListActivity
     }
 
-    //@TODO(15) BUAT METHOD postBerita() untuk insert data ke REST API
+    //@TODO(14) BUAT METHOD postBerita() untuk insert data ke REST API
 }
