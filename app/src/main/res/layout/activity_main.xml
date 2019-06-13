@@ -4,6 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <!-- @TODO(5) TAMBAHKAN EditText dengan id judul_berita -->
+    <!-- @TODO(6) TAMBAHKAN EditText dengan id tipe_berita -->
+    <!-- @TODO(7) TAMBAHKAN CheckBox dengan id is_active -->
+    <!-- @TODO(8) TAMBAHKAN EditText dengan id isi_berita -->
+    <!-- @TODO(9) TAMBAHKAN Button dengan text "INSERT BERITA" dan id = btn_post -->
+    <!-- @TODO(10) TAMBAHKAN Button dengan text LIST POST dan id = btn_list -->
 
 </LinearLayout>

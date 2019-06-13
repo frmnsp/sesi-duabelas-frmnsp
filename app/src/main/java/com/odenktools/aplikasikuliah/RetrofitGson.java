@@ -4,6 +4,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -11,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -28,8 +30,14 @@ public class RetrofitGson {
 
     private ApiServices apiServices;
 
+    /**
+     * URL REST API YANG DITUJU
+     */
     private static final String BASE_URL = "http://kampus.odenktools.com/api/v1/";
 
+    /**
+     * PASSWORD
+     */
     private static final String API_KEY = "Ctbm5oNWbsPbfmpW60yjbcvEmwXrJr5H";
 
     private RetrofitGson() {
@@ -79,7 +87,7 @@ public class RetrofitGson {
      *
      * @return ApiServices
      */
-    public ApiServices getApisServices() {
+    public ApiServices api() {
         if (this.apiServices == null) {
             this.apiServices = this.retrofit.create(ApiServices.class);
         }
@@ -101,20 +109,23 @@ public class RetrofitGson {
      * @return Interceptor
      */
     private Interceptor headerInterceptor() {
-        return chain -> {
-            Request original = chain.request();
-            Request.Builder builder = original.newBuilder();
-            final String basic = "Bearer " + API_KEY;
-            builder.addHeader("Accept", "application/json");
-            builder.addHeader("Authorization", basic);
-            builder.addHeader("Cache-Control", "no-cache");
-            for (final String headerName : this.requestHeaders.keySet()) {
-                final String headerValue = this.requestHeaders.get(headerName);
-                builder.header(headerName, headerValue);
+        return new Interceptor() {
+            @Override
+            public Response intercept(Chain chain) throws IOException {
+                Request original = chain.request();
+                Request.Builder builder = original.newBuilder();
+                final String basic = "Bearer " + API_KEY;
+                builder.addHeader("Accept", "application/json");
+                builder.addHeader("Authorization", basic);
+                builder.addHeader("Cache-Control", "no-cache");
+                for (final String headerName : requestHeaders.keySet()) {
+                    final String headerValue = requestHeaders.get(headerName);
+                    builder.header(headerName, headerValue);
+                }
+                return chain.proceed(
+                        builder.build()
+                );
             }
-            return chain.proceed(
-                    builder.build()
-            );
         };
     }
 }

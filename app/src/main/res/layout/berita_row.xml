@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtJudulBerita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="JUDUL" />
+
+        <TextView
+            android:id="@+id/txtIsiBerita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ISI BERITA" />
+
+        <Button
+            android:id="@+id/btnLihatData"
+            android:text="Lihat Data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
