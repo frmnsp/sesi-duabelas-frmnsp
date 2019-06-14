@@ -14,7 +14,7 @@ public class BeritaListActivity extends AppCompatActivity {
 
     //@TODO(16) BUAT METHOD getListBerita() untuk mengambil data dari REST API
 
-    //@TODO(17) BUAT CLASS BARU BeritaRecyclerAdapter yang extends ke RecyclerView.Adapter (SESI6)
+    //@TODO(18) BUAT CLASS BARU BeritaRecyclerAdapter yang extends ke RecyclerView.Adapter (SESI6)
 
-    //@TODO(18) PADA METHOD getListBerita() INSERT DATA DARI REST API TERSEBUT PADA ADAPTER (SESI6)
+    //@TODO(19) PADA METHOD getListBerita() INSERT DATA DARI REST API TERSEBUT PADA ADAPTER (SESI6)
 }

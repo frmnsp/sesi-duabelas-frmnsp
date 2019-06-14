@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.odenktools.aplikasikuliah">
 
-    <!-- //@TODO(19) TAMBAHKAN INTERNET PERMISSION (AGAR APLIKASI DAPAT MENGAKSES INTERNET) -->
+    <!-- //@TODO(17) TAMBAHKAN INTERNET PERMISSION (AGAR APLIKASI DAPAT MENGAKSES INTERNET) -->
 
     <application
         android:allowBackup="true"
