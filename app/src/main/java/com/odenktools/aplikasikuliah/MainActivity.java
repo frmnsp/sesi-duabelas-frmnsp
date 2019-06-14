@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         //@TODO(11) TAMBAHKAN INITIALISASI WIDGET
 
-        //@TODO(12) BUAT PERMODELAN CLASS UNTUK SERIALIZE DATA DARI REST API (GUNAKAN www.jsonschema2pojo.org)
+        //@TODO(12) BUAT PERMODELAN CLASS UNTUK DESERIALIZE DATA DARI RESTFUL (GUNAKAN www.jsonschema2pojo.org)
 
         //@TODO(13) BUAT METHOD untuk memanggil Activity BeritaListActivity
     }
